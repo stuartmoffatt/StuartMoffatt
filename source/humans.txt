@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Stuart Moffatt -- Web Person -- @stumoff
 
 # THANKS
 
-    <name>
+    for looking
 
 # TECHNOLOGY COLOPHON
 
