@@ -42,8 +42,9 @@ h1 {
 	.social {
 		$icon-width: 42px;
 		$icon-margin: 10px;
+		$icon-count: 5;
 
-		width: (($icon-margin * 2) + $icon-width) * 4;
+		width: (($icon-margin * 2) + $icon-width) * 5;
 		margin: 0 auto;
 		li {
 			float: left;
