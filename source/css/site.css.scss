@@ -1,0 +1,80 @@
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.8rem normal 'Crete Round';
+	padding: 0;
+	background: #8597a3;
+	text-align: center;
+}
+
+section {
+	height: 1000px;
+}
+
+h1 {
+	color: #FFF;
+	font-size: 7rem;
+	font-weight: 400;
+	padding-top: 100px;
+	span {
+		font-size: 10rem;
+		display: block;
+	}
+}
+
+// Individual sections
+#home {
+	.roles {
+		margin: 25px 0 35px 0;
+		li {
+			display: inline;
+			padding: 25px 0;
+			color: #2B516A;
+			&:after {
+				content: " / ";
+			}
+			&:last-child:after {
+				content: "";
+			}
+		}
+	}
+	.social {
+		$icon-width: 42px;
+		$icon-margin: 10px;
+
+		width: (($icon-margin * 2) + $icon-width) * 4;
+		margin: 0 auto;
+		li {
+			float: left;
+			margin: 0 $icon-margin;
+			a {
+				text-indent: -9995px;
+				overflow: hidden;
+				background: transparent image-url('social.png') 0 0 no-repeat;
+				display: block;
+				width: $icon-width;
+				height: $icon-width;
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			&.twitter a {
+				background-position: 0 0;
+			}
+			&.instagram a {
+				background-position: -42px 0;
+			}
+			&.linkedin a {
+				background-position: -84px 0;
+			}
+			&.vimeo a {
+				background-position: -126px 0;
+			}
+			&.untappd a {
+				background-position: -168px 0;
+			}
+		}
+	}
+}
