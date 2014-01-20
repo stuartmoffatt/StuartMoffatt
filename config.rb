@@ -12,4 +12,4 @@ configure :build do
 end
 
 # silence i18n warning
-::I18n.config.enforce_available_locales = false
+# ::I18n.config.enforce_available_locales = false
