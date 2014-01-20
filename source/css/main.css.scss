@@ -1,36 +1,47 @@
+$colour-bg: #8597a3;
+$colour-accent: #2B516A;
+
+@mixin about-block ($vertical-padding: 0) {
+	display: inline-block;
+	background: $colour-bg;
+	color: #FFF;
+	padding: $vertical-padding 10px;
+	clear: left;
+	float: left;
+}
+
 html {
 	font-size: 62.5%;
 }
 body {
 	font: 1.8rem normal 'Crete Round';
-	padding: 0;
-	background: #8597a3;
-	text-align: center;
+	padding: 1000px 0 0 0;
+	background: $colour-bg;
 }
 
 section {
-	height: 1000px;
+
 }
 
-h1 {
-	color: #FFF;
-	font-size: 7rem;
-	font-weight: 400;
-	padding-top: 75px;
-	span {
-		font-size: 15rem;
-		display: block;
+// Panel
+#about {
+	position: fixed;
+	left: 50px;
+	top: 50px;
+	.hi {
+		font-size: 7rem;
+		@include about-block();
 	}
-}
-
-// Individual sections
-#home {
+	h1 {
+		font-size: 7rem;
+		font-weight: 400;
+		@include about-block();
+	}
 	.roles {
-		margin: 25px 0 35px 0;
+		@include about-block(20px);
 		li {
 			display: inline;
-			padding: 25px 0;
-			color: #2B516A;
+			font-size: 1.8rem;
 			&:after {
 				content: " / ";
 			}
@@ -44,8 +55,8 @@ h1 {
 		$icon-margin: 10px;
 		$icon-count: 4;
 
-		width: (($icon-margin * 2) + $icon-width) * $icon-count;
-		margin: 0 auto;
+		@include about-block(10px);
+		padding-left: 0;
 		li {
 			float: left;
 			margin: 0 $icon-margin;
@@ -78,4 +89,19 @@ h1 {
 			}
 		}
 	}
+}
+
+.photo {
+	height: 1000px;
+	background-position: center center;
+	background-size: cover; 
+}
+#darkhedges {
+	background-image: image-url('darkhedges.jpg');
+}
+#beningbrough {
+	background-image: image-url('beningbrough.jpg');
+}
+#tuscany {
+	background-image: image-url('tuscany.jpg');
 }
