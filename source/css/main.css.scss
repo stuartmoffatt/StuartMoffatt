@@ -16,9 +16,9 @@ h1 {
 	color: #FFF;
 	font-size: 7rem;
 	font-weight: 400;
-	padding-top: 100px;
+	padding-top: 75px;
 	span {
-		font-size: 10rem;
+		font-size: 15rem;
 		display: block;
 	}
 }
@@ -42,9 +42,9 @@ h1 {
 	.social {
 		$icon-width: 42px;
 		$icon-margin: 10px;
-		$icon-count: 5;
+		$icon-count: 4;
 
-		width: (($icon-margin * 2) + $icon-width) * 5;
+		width: (($icon-margin * 2) + $icon-width) * $icon-count;
 		margin: 0 auto;
 		li {
 			float: left;
