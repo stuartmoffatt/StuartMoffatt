@@ -10,10 +10,12 @@
 
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Crete+Round" %>
     <%= stylesheet_link_tag "reset", "main" %>
-    <%= javascript_include_tag  "main" %>
   </head>
   
   <body class="<%= page_classes %>">
     <%= yield %>
   </body>
+  <script src=""></script>
+  <%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" %>
+  <%= javascript_include_tag  "main" %>
 </html>

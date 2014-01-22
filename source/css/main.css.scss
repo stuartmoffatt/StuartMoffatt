@@ -1,6 +1,8 @@
 $colour-bg: #8597a3;
 $colour-accent: #2B516A;
 
+$default-viewport-height: 1500px;
+
 @mixin about-block ($vertical-padding: 0) {
 	display: inline-block;
 	background: $colour-bg;
@@ -10,12 +12,13 @@ $colour-accent: #2B516A;
 	float: left;
 }
 
+
 html {
 	font-size: 62.5%;
 }
 body {
 	font: 1.8rem normal 'Crete Round';
-	padding: 1000px 0 0 0;
+	padding: $default-viewport-height 0 0 0;
 	background: $colour-bg;
 }
 
@@ -91,7 +94,7 @@ body {
 }
 
 .photo {
-	height: 1000px;
+	height: $default-viewport-height;
 	background-position: center center;
 	background-size: cover; 
 }
