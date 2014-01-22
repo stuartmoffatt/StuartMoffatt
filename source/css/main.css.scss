@@ -1,7 +1,7 @@
 $colour-bg: #8597a3;
 $colour-accent: #2B516A;
 
-$default-viewport-height: 1500px;
+$default-viewport-height: 1300px;
 
 @mixin about-block ($vertical-padding: 0) {
 	display: inline-block;
@@ -100,6 +100,9 @@ body {
 }
 #darkhedges {
 	background-image: image-url('photos/darkhedges.jpg');
+}
+#galloway {
+	background-image: image-url('photos/galloway.jpg');
 }
 #beningbrough {
 	background-image: image-url('photos/beningbrough.jpg');
