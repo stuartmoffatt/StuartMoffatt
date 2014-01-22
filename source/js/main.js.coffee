@@ -1,7 +1,7 @@
 $ ->
 	
 	makeHigh = ->
-	  h = $(window).height() + 25
+	  h = $(window).height() + 70
 	  $("body").css "padding-top", h
 	  $(".photo").height h
 
