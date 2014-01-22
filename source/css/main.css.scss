@@ -19,10 +19,6 @@ body {
 	background: $colour-bg;
 }
 
-section {
-
-}
-
 // Panel
 #about {
 	position: fixed;
@@ -59,7 +55,10 @@ section {
 		padding-left: 0;
 		li {
 			float: left;
-			margin: 0 $icon-margin;
+			margin: 0 0 0 ($icon-margin * 2);
+			&:first-child {
+				margin-left: $icon-margin;
+			}
 			a {
 				text-indent: -9995px;
 				overflow: hidden;
