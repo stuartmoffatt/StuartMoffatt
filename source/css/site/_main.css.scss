@@ -8,6 +8,38 @@ $colour-accent: #2B516A;
   font-smoothing: antialiased;
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    -webkit-flex-direction:vertical;
+    -moz-flex-direction:vertical;
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+  }
+  @else {
+    -webkit-flex-direction:horizontal;
+    -moz-flex-direction:horizontal;
+    -ms-flex-direction:row;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+  }
+}
+
+@mixin justify-content($value) {
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
 
 html {
   font-size: 62.5%;
@@ -105,14 +137,18 @@ h1 {
 
 .section--photo {
   position: relative;
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.photo-title {
+.photo-caption {
   display: none;
-  background: rgba(85,85,85, 0.9);
+}
+
+.photo-title {
+  $size: 225px;
+  background: rgba(85,85,85, 0.8);
   color: #FFF;
   padding: 0.2em;
   font-size: 3rem;
@@ -122,17 +158,24 @@ h1 {
   position: absolute;
   top: 10%;
   right: 10%;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  text-align: center;
+  // Flex box
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
 }
 
 .photo-title__loc {
-  display: block;
   font-weight: 400;
   font-size: 0.6em;
 }
 
 @media only screen and (min-width: 700px) {
-  .photo-title {
-    display: inline-block;
+  .photo-caption {
+    display: block;
   }
 }
 
@@ -142,6 +185,7 @@ h1 {
 
 .section--darkhedges {
   background-image: url(/img/photos/darkhedges.jpg);
+  background-position: center center;
   .photo-title {
     top: auto;
     right: auto;
