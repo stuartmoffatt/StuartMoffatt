@@ -8,7 +8,8 @@ configure :build do
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
-  activate :asset_hash
+  # Ignore favicons and photos.css (that we lazy load, so need filename to stay)
+  activate :asset_hash, :ignore => [/([^\/]+\.png)$/, /css\/photos\.css$/]
 end
 
 # silence i18n warning
