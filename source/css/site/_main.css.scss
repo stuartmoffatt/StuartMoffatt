@@ -1,0 +1,173 @@
+$colour-bg: #808080;
+$colour-accent: #2B516A;
+
+@mixin antialias {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+  font-weight: normal;
+  @include antialias();
+  color: #FFF;
+  background-color: $colour-bg;
+  font-family: 'Playfair Display', Georgia, serif;
+  background-size: cover;
+  text-align: center;
+}
+
+.hi {
+  font-size: 30vw;
+  line-height: 1;
+  font-weight: 900;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 8vw;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: 'Playfair Display', Georgia, serif;
+  border-bottom: 1px solid #AAA;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.section--about {
+  padding-bottom: 100px;
+}
+
+// Panel
+.roles {
+  li {
+    display: inline;
+    font-size: 1.8rem;
+    &:after {
+      content: " / ";
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+.social {
+  $icon-width: 42px;
+  $icon-margin: 10px;
+  $icon-count: 4;
+  padding-top: 50px;
+  li {
+    display: inline-block;
+    margin: 0 0 0 ($icon-margin * 2);
+    &:first-child {
+      margin-left: $icon-margin;
+    }
+    a {
+      text-indent: -9995px;
+      overflow: hidden;
+      background: transparent image-url('social.png') 0 0 no-repeat;
+      display: block;
+      width: $icon-width;
+      height: $icon-width;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &.twitter a {
+      background-position: 0 0;
+    }
+    &.instagram a {
+      background-position: -42px 0;
+    }
+    &.linkedin a {
+      background-position: -84px 0;
+    }
+    &.vimeo a {
+      background-position: -126px 0;
+    }
+    &.untappd a {
+      background-position: -168px 0;
+    }
+  }
+}
+
+.section--photo {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo-title {
+  display: none;
+  background: rgba(85,85,85, 0.9);
+  color: #FFF;
+  padding: 0.2em;
+  font-size: 3rem;
+  font-weight: 900;
+  float: left;
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.photo-title__loc {
+  display: block;
+  font-weight: 400;
+  font-size: 0.6em;
+}
+
+@media only screen and (min-width: 700px) {
+  .photo-title {
+    display: inline-block;
+  }
+}
+
+.section--croc {
+  background-image: url(/img/photos/croc.jpg);
+}
+
+.section--darkhedges {
+  background-image: url(/img/photos/darkhedges.jpg);
+  .photo-title {
+    top: auto;
+    right: auto;
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
+.section--giraffe {
+  background-image: url(/img/photos/giraffe.jpg);
+}
+
+@media only screen and (min-width: 1000px) {
+  .roles {
+    display: inline;
+    &:after {
+      content: " / ";
+    }
+    &.roles--play:after {
+      content: "";
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hi {
+    font-size: 40rem;
+  }
+}

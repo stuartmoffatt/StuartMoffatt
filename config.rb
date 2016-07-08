@@ -1,4 +1,3 @@
-activate :automatic_image_sizes
 activate :directory_indexes
 
 set :css_dir, 'css'
@@ -7,6 +6,7 @@ set :images_dir, 'img'
 
 configure :build do
   activate :minify_css
+  activate :minify_html
   activate :minify_javascript
   activate :asset_hash
 end
