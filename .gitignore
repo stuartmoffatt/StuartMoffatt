@@ -1,5 +1,6 @@
 # Ignore environment data
 .env
+/tmp
 
 # Ignore bundler config
 /.bundle
