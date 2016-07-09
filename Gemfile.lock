@@ -33,6 +33,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.2)
     ffi (1.9.6)
+    git-version-bump (0.15.1)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -96,7 +97,11 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.4)
       activesupport (>= 3.1)
+    puma (3.4.0)
     rack (1.5.2)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.4)
@@ -133,3 +138,11 @@ DEPENDENCIES
   middleman-blog
   middleman-minify-html
   middleman-neat
+  puma
+  rack-contrib
+
+RUBY VERSION
+   ruby 2.1.9p490
+
+BUNDLED WITH
+   1.12.5

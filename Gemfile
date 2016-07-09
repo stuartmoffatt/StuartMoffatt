@@ -6,3 +6,7 @@ gem 'middleman'
 gem 'middleman-blog'
 gem 'middleman-neat'
 gem 'middleman-minify-html'
+group :production do
+	gem "rack-contrib"
+	gem "puma"
+end
