@@ -32,14 +32,15 @@ body {
 }
 
 .hi {
-  font-size: 30vw;
+  font-size: 26vw;
   line-height: 1;
   font-weight: 900;
+  margin-top: 10%;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 8vw;
+  font-size: 6vw;
   max-width: 90%;
   margin: 0 auto;
   font-family: 'Playfair Display', Georgia, serif;
@@ -113,6 +114,9 @@ h1 {
 
 
 @media only screen and (min-width: 1000px) {
+  .hi {
+    margin-top: 0;
+  }
   .roles {
     display: inline;
     &:after {
@@ -126,6 +130,6 @@ h1 {
 
 @media only screen and (min-width: 1200px) {
   .hi {
-    font-size: 40rem;
+    font-size: 36rem;
   }
 }
